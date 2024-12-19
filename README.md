@@ -35,6 +35,7 @@ A high-performance, secure banking API built with Go, demonstrating robust micro
 
 ### Account Management
 ```http
+POST /login             # Login to your account using you JWT token in the header
 POST /account           # Create new account with automatic number generation
 GET /account/{id}       # Retrieve account details with full audit trail
 GET /accounts           # List all accounts with pagination support
