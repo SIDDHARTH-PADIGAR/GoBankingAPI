@@ -1,5 +1,3 @@
-Here's the content converted to markdown format:
-
 # GoBank - Enterprise-Grade Banking API Solution 🏦
 
 A high-performance, secure banking API built with Go, demonstrating robust microservices architecture, transaction management, and financial data handling at scale. This project showcases modern backend development practices and secure financial transaction processing.
@@ -105,7 +103,15 @@ make build
 ./bin/gobank --seed  # Initializes with sample data
 ```
 
-3. Launch Server
+3. Database Setup with Docker 🟩
+Run the PostgreSQL database in a Docker container:
+```bash
+docker run --name gobank-db -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=secret -e POSTGRES_DB=gobank -p 5432:5432 -d postgres
+```
+
+This ensures a consistent and isolated environment for the database. Update the application configuration to point to the Docker-hosted PostgreSQL instance.
+
+4. Launch Server
 ```bash
 make run  # Starts server on :8080
 ```
